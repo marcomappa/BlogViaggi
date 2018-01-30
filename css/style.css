@@ -161,6 +161,8 @@ h1 + p, p + p {
 }
 div.gallery {
     border: 1px solid #ccc;
+    float: left;
+    width: 180px;
 }
 
 div.gallery:hover {
