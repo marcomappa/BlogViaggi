@@ -3,11 +3,7 @@
 
   <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
+   
     <title>Caamin vè a Lourd!</title>
 
     <!-- Bootstrap core CSS -->
@@ -22,9 +18,7 @@
     <link href="css/clean-blog.min.css" rel="stylesheet">
 
 
-
-
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
   <title>Parallax Depth Cards</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
@@ -33,10 +27,41 @@
 
       <link rel="stylesheet" href="css/style.css">
 
-
+ <style>
+    section { 
+      background-color: #DDD;
+      color: #000; 
+      width: 200px;
+      padding: 5px 0px;
+      text-align: center;
+      border: 2px solid green;
+      margin: 3px;
+      font-size: 14px;
+    }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
   </head>
 
   <body>
+
+      <input type="button" id="go1" value="Animazioni in simultanea"/>
+    <input type="button" id="go2" value="Animazioni in sequenza"/>
+
+    <div id="block1">Blocco N.1</div>
+    <div id="block2">Blocco N.2</div>
+
+    <script>
+    $("#go1").click(function(){
+      $("#block1").animate({width:"90%"}, {queue:false, duration:3000})
+      .animate({fontSize:"24px"}, 1000)
+      .animate({borderRightWidth:"15px"}, 1000);
+    });
+    $("#go2").click(function(){
+      $("#block2").animate({width:"90%"}, 1000)
+      .animate({fontSize:"24px"}, 1000)
+      .animate({borderRightWidth:"15px"}, 1000);
+    });
+    </script>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -66,7 +91,7 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/mondo.jpg')">
+    <header class="masthead">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
